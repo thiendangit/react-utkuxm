@@ -94,7 +94,10 @@ const App = () => {
         x: 1500,
       }}
       onChange={(data) => {
-        alert(data.position);
+        alert(JSON.stringify(data?.current));
+      }}
+      pagination={{
+        pageSize: 20,
       }}
       summary={() => (
         <Table.Summary fixed={fixedTop ? 'top' : 'bottom'}>
